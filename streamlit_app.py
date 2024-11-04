@@ -1,6 +1,6 @@
+import requests
 import streamlit as st
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+data = requests.get("https://apexapps.oracle.com/pls/apex/cetools/api/v1/products").json()
+
+st.write(data)
